@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script type="text/javascript">
+      function submit(t) {
+        const body = document.getElementById('chat-body');
+        if (t === '') {
+        body.innerHTML +=`
+<div class="chat chat-start px-2 py-1">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+    </div>
+  </div>
+  <div class="chat-bubble">
+    中身が空の人生ほど虚しいものはないでー。ほな残念賞やで！
+  </div>
+</div>
+        `
+        } else if(t === '@menu') {
+        body.innerHTML +=`
+<div class="chat chat-start px-2 py-1">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+    </div>
+  </div>
+  <div class="chat-bubble">
+    本日のメニューはこちらの残念賞のフルコースとなっております。お客様こちらのご注文でよろしいでしょうか？
+  </div>
+</div>
+        `
+        } else if(t === '@call') {
+        body.innerHTML +=`
+<div class="chat chat-start px-2 py-1">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+    </div>
+  </div>
+  <div class="chat-bubble">
+    こちらは、残念賞です。おかけになった電話は電源が入っていないか、 電波の届かない場所にあるため、かかりません。
+  </div>
+</div>
+        `
+        } else if(t === '@search') {
+        body.innerHTML +=`
+<div class="chat chat-start px-2 py-1">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+    </div>
+  </div>
+  <div class="chat-bubble">
+    あ、ひょっとして「残念賞」を検索しようとしました？そんなあなたに残念賞！w
+  </div>
+</div>
+        `
+        } else if(t === '@back') {
+        body.innerHTML +=`
+<div class="chat chat-start px-2 py-1">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+    </div>
+  </div>
+  <div class="chat-bubble">
+    時々過去の自分を責めたり、悔やんだり、あるいは傷つけたり、そないなことしたくなる気持ち、よーわかるで。けどな、じんせいーっちゅーのは、常に前にしか進めへんのや！せなから、二度とバックせんといてや！わいとの約束やで！
+  </div>
+</div>
+        `
+        } else if(t === '@profile') {
+        body.innerHTML +=`
+<div class="chat chat-start px-2 py-1">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+    </div>
+  </div>
+  <div class="chat-bubble">
+    えっやだ、、、私のプロフィール見ないで！キャーッッッッッッお巡りさんこの人痴漢です！
+  </div>
+</div>
+        `
+        } else {
+        body.innerHTML +=`
+<div class="chat chat-end px-2 py-1">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+    </div>
+  </div>
+  <div class="chat-bubble">${t}</div>
+  <div class="chat-footer opacity-50">Read</div>
+</div>
+<div class="chat chat-start px-2 py-1">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+    </div>
+  </div>
+  <div class="chat-bubble">
+    残念賞ですね！
+  </div>
+</div>
+        `
+        }
+        window.scrollTo({top: 999999999999999})
+      }
+    </script>
+  </head>
+  <body>
+    <div class="min-h-full flex flex-col">
+      <div class="header flex items-center gap-4 p-4 bg-black/70 sticky top-0 z-10">
+        <span class="material-symbols-outlined" onclick="submit('@back')">arrow_back_ios</span>
+        <span onclick="submit('@profile')">残念賞トーク</span>
+        <span class="material-symbols-outlined ml-auto" onclick="submit('@search')">search</span>
+        <span class="material-symbols-outlined" onclick="submit('@call')">call</span>
+        <span class="material-symbols-outlined" onclick="submit('@menu')">menu</span>
+      </div>
+      <div class="chat-body py-2 flex-1" id="chat-body">
+        <div class="chat chat-start px-2 py-1">
+          <div class="chat-image avatar">
+            <div class="w-10 rounded-full">
+              <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+            </div>
+          </div>
+          <div class="chat-bubble">
+            こんにちは。ようこそ残念賞トークへ。ここでは全ての日常における愚痴や不満などなんでも投稿してください。毎回「残念賞だね！」とお返しさせて頂きます！w
+          </div>
+        </div>
+        <div class="chat chat-start px-2 py-1">
+          <div class="chat-image avatar">
+            <div class="w-10 rounded-full">
+              <img src="./img/n55tnkbhs2rrgjcehpiq01arom.png" />
+            </div>
+          </div>
+          <div class="chat-bubble">
+            それでは逝ってみよう！w
+          </div>
+        </div>
+      </div>
+      <div class="chat-input bg-black p-2 sticky bottom-0">
+        <form class="flex items-center gap-2 m-0" id="postForm">
+          <input type="text" placeholder="Enter a message" class="input rounded-full input-sm w-full focus:outline-none" id="postText" />
+          <button type="submit"><span class="material-symbols-outlined">send</span></button>
+        </form>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('postForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          submit(postText.value);
+          postText.value = '';
+        });
+      })
+    </script>
+  </body>
+</html>
